@@ -9,4 +9,4 @@ class Film(models.Model):
     url = models.URLField(blank=True, null=True)
     
     def __str__(self):
-        return self.title + " (" + str(self.year) + ")"
+        return self.title + " (" + str(self.year) + "r.)"
