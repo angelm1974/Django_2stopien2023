@@ -5,7 +5,10 @@ from .models import Film
 
 def home(request):
     wyszukiwanie = request.GET.get('szukajFilmu')
-    moje_filmy = Film.objects.all()
+    if wyszukiwanie:
+        moje_filmy = Film.objects.filter(title__icontains=wyszukiwanie)
+    else:
+        moje_filmy = Film.objects.all()
     return render(request, 'home.html', {'name': wyszukiwanie, 'filmy': moje_filmy})
 
 def o_mnie(request):
