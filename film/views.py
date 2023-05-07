@@ -14,5 +14,5 @@ def home(request):
 def o_mnie(request):
     return render(request, 'about.html')
 
-def newsy(request):
-    return render(request, 'newsy.html')
+# def newsy(request):
+#     return render(request, 'newsy.html')
