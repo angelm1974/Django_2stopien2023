@@ -13,3 +13,6 @@ def home(request):
 
 def o_mnie(request):
     return HttpResponse("<H1 style='color:red;'>To jest moja strona</H1>")
+
+def newsy(request):
+    return render(request, 'newsy.html')
