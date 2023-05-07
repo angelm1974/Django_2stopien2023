@@ -12,7 +12,7 @@ def home(request):
     return render(request, 'home.html', {'name': wyszukiwanie, 'filmy': moje_filmy})
 
 def o_mnie(request):
-    return HttpResponse("<H1 style='color:red;'>To jest moja strona</H1>")
+    return render(request, 'about.html')
 
 def newsy(request):
     return render(request, 'newsy.html')
